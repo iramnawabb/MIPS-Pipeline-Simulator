@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+            .stall_red {
+                color: red;
+            }
+            table,
+            tr,
+            td {
+                border: none;
+            }
+            td {
+                padding: 5px 10px;
+            }
+            input[readonly='1'] {
+                padding: 4px 8px;
+                border: 1px solid #c4c4c4;
+                border-radius: 4px;
+            }
+        </style>
+        <script language="JavaScript" src="bottom.js"></script>
+    </head>
+
+    <body onLoad="Check_Depencency();">
+        <script language="JavaScript">
+            BuildPipeline();
+        </script>
+
+        <hr />
+
+        <table border="0">
+            <tr>
+                <td>Potential Hazards:</td>
+            </tr>
+            <tr>
+                <td>
+                    <form name="dependency_form">
+                        <table>
+                            <tr>
+                                <td>
+                                    <textarea
+                                        name="display"
+                                        cols="70"
+                                        rows="10"
+                                    >
+                                    </textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

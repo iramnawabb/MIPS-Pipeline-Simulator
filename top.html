@@ -1,0 +1,143 @@
+<HTML>
+  <HEAD>
+    <style>
+      input[type="button"]{
+        border: none;
+        outline: none;
+        padding: 5px 20px;
+        color: white;
+        background-color: rgb(27, 157, 107);
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px #c4c4c4;
+      }
+      select{
+        padding: 5px 20px;
+        border-radius: 5px;
+        margin-right: 10px;
+        border: 1px solid #c4c4c4;
+      }
+    </style>
+  <SCRIPT LANGUAGE="JavaScript" SRC="top.js">
+  </SCRIPT>
+  </HEAD>
+  
+  <BODY onLoad="Page_Load_Complete();" onUnload="CloseHelp();">
+  
+  <table border="0" align="center">
+    <td width="10%" rowspan="3">
+    &nbsp;
+    </td>
+  
+    
+    <td valign="middle" align="right">
+    <form name="insert_instruction_table">
+    <table align="right" border="0" width="100%">
+      <tr>
+      <td>
+      <select name="operator" onChange="Change_Add_Instruction();">
+      <option value="add">Add
+      <option value="sub">Subtract
+      <option value="mult">Multiply
+      <option value="div">Divide
+      <option value="ld">Load
+      <option value="sd">Store
+      </select>
+      </td>
+      
+      <td>
+      <select name="destination_register">
+      <option value="1">1
+      <option value="2">2
+      <option value="3">3
+      <option value="4">4
+      <option value="5">5
+      <option value="6">6
+      <option value="7">7
+      <option value="8">8
+      <option value="9">9
+      <option value="Offset">Offset
+      </select>
+      </td>	
+  
+      <td>
+      <select name="source_register1">
+      <option value="1">1
+      <option value="2">2
+      <option value="3">3
+      <option value="4">4
+      <option value="5">5
+      <option value="6">6
+      <option value="7">7
+      <option value="8">8
+      <option value="9">9
+      <option value="Offset">Offset
+      </select>
+      </td>		
+  
+      <td>
+      <select name="source_register2">
+      <option value="1">1
+      <option value="2">2
+      <option value="3">3
+      <option value="4">4
+      <option value="5">5
+      <option value="6">6
+      <option value="7">7
+      <option value="8">8
+      <option value="9">9
+      <option value="Offset">Offset
+      </select>
+      </td>	
+  
+      <td align="right">
+      <input type="button" width="185" value="   Insert Instruction    " onClick="Instruction_Insert();">
+      </td>
+      </tr>
+    </table>
+    </form>
+    </td>
+  
+    <td width="10%" rowspan="3">
+    &nbsp;
+    </td>
+  
+    </tr>
+  
+    <tr>
+    <td align="right" valign="middle">
+    <form name="forwarding_form">
+    <table width="100%" align="right" border="0">
+      <tr>
+      <td align="center">
+      <input name="enabled_checkbox" type="checkbox" onClick="UpdateDisplay();ShowDeps();">
+      Data Forwarding
+      </td>
+  
+      <td align="right">
+      <input type="button" width="185" value="Remove Instruction" onClick="RemoveLastInstruction();">
+      </td>
+      </tr>
+    </table>
+    </form>
+    </td>
+    </tr>
+  
+    <tr>
+    <td valign="middle" align="right">
+    <form>
+    <table width="100%" align="right" border="0">
+      <tr>
+      <td align="right">
+      <input type="button" width="185" value=" Reset Application  " onClick="parent.location.href='main.html';">
+      </td>
+      </tr>
+    </table>
+    </form>
+    </td>
+    </tr>
+  
+    
+  </table>
+  
+  </BODY>
+  </HTML>
